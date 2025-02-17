@@ -1,4 +1,5 @@
 using BlazingPizzaSite.Components;
+using BlazingPizzaSite.Data;
 using BlazingPizzaSite.Models;
 
 namespace BlazingPizzaSite
@@ -19,6 +20,9 @@ namespace BlazingPizzaSite
             // Register the pizzas service
             builder.Services.AddSingleton<PizzaService>();
 
+            builder.Services.AddHttpClient();
+            builder.Services.AddSqlite<PizzaStoreContext>("Data Source=pizza.db");
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -36,6 +40,17 @@ namespace BlazingPizzaSite
 
             app.MapRazorComponents<App>()
                 .AddInteractiveServerRenderMode();
+
+            // Initialize the database
+            var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();
+            using (var scope = scopeFactory.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<PizzaStoreContext>();
+                if (db.Database.EnsureCreated())
+                {
+                    SeedData.Initialize(db);
+                }
+            }
 
             app.Run();
         }
