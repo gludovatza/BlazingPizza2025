@@ -1,5 +1,7 @@
 ﻿@page "/home"
 @using BlazingPizzaSite.Models
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
 
 <PageTitle>Home</PageTitle>
 
@@ -36,5 +38,10 @@
             new PizzaSpecial { Name = "Basic Cheese Pizza", BasePrice =  11.99M, Description = "It's cheesy and delicious. Why wouldn't you want one?", ImageUrl="img/pizzas/cheese.jpg"},
             new PizzaSpecial { Name = "Classic pepperoni", BasePrice =  10.5M, Description = "It's the pizza you grew up with, but Blazing hot!", ImageUrl="img/pizzas/pepperoni.jpg" }
         });
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        specials = await HttpClient.GetFromJsonAsync<List<PizzaSpecial>>(NavigationManager.BaseUri + "specials");
     }
 }
