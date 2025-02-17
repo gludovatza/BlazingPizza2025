@@ -27,3 +27,4 @@ C:\Users\Tanár2\source\repos\BlazingPizzaSite\BlazingPizzaSite\obj\Debug\net8.0
 C:\Users\Tanár2\source\repos\BlazingPizzaSite\BlazingPizzaSite\obj\Debug\net8.0\BlazingPizzaSite.pdb
 C:\Users\Tanár2\source\repos\BlazingPizzaSite\BlazingPizzaSite\obj\Debug\net8.0\BlazingPizzaSite.genruntimeconfig.cache
 C:\Users\Tanár2\source\repos\BlazingPizzaSite\BlazingPizzaSite\obj\Debug\net8.0\ref\BlazingPizzaSite.dll
+C:\Users\Tanár2\source\repos\BlazingPizzaSite\BlazingPizzaSite\obj\Debug\net8.0\BlazingPizzaSite.sourcelink.json

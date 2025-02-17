@@ -45,6 +45,18 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\Users\\Tanár2\\source\\repos\\BlazingPizzaSite\\BlazingPizzaSite\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Tanár2\\source\\repos\\BlazingPizzaSite\\BlazingPizzaSite\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Tanár2\\source\\repos\\BlazingPizzaSite\\BlazingPizzaSite\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
       "Id": "C:\\Users\\Tanár2\\source\\repos\\BlazingPizzaSite\\BlazingPizzaSite\\wwwroot\\img\\bike.svg",
       "PackagePath": "staticwebassets\\img\\bike.svg"
     },
